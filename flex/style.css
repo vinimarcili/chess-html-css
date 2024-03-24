@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  background-color: #6f6f76;
+  background-color: black;
   display: flex;
   border: 5px solid black;
   flex-wrap: wrap;
@@ -45,6 +45,11 @@ body {
 .row:nth-child(even) .square:nth-child(even),
 .row:nth-child(odd) .square:nth-child(odd) {
   background-color: white;
+}
+
+.row:nth-child(even) .square:nth-child(odd),
+.row:nth-child(odd) .square:nth-child(even) {
+  background-color: #6f6f76;
 }
 
 .square img {

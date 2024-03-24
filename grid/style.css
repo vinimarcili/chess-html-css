@@ -1,0 +1,64 @@
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+* {
+  min-width: 0;
+  min-height: 0;
+}
+
+body {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+.container {
+  background: black;
+  display: flex;
+  border: 5px solid black;
+  flex-wrap: wrap;
+  width: 810px;
+  height: 810px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-auto-flow: row;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  font-size: 100px;
+  line-height: 1;
+}
+
+.square:nth-child(even) {
+  background-color: white;
+}
+
+ .square:nth-child(odd) {
+  background-color: #6f6f76;
+}
+
+.square:nth-child(16n+1),
+.square:nth-child(16n+3),
+.square:nth-child(16n+5),
+.square:nth-child(16n+7) {
+  background-color: white;
+}
+
+.square:nth-child(16n+2),
+.square:nth-child(16n+4),
+.square:nth-child(16n+6),
+.square:nth-child(16n+8) {
+  background-color: #6f6f76;
+}
